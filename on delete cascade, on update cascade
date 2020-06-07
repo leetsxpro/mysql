@@ -1,0 +1,15 @@
+SELECT * FROM workbench.comment;
+
+/* 테이블 제약 조건 확인 */
+select * from information_schema.table_constraints
+where table_name = 'comment';
+
+/* 제약 조건 삭제 */
+alter table comment drop foreign key comment_ibfk_1;
+
+/* 종속된 상위 테이블에 데이터 삭제시 하위 테이블 컬럼도 삭제되는 제약 조건 추가 */
+alter table comment
+add constraint comment_fk_1
+foreign key(board_bno) references board(bno)
+on delete cascade
+on update cascade;
