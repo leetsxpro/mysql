@@ -1,0 +1,19 @@
+/* 환경변수 먼저 설정
+    예)시스템 변수에서 path 편집, C:\APM\mysql\bin
+    
+    cmd 관리자 권한으로 실행,
+    cd C:\APM\mysql\bin
+    
+    mysql -uroot -p
+    비밀번호 입력
+    
+    접속완료
+    
+    기본명령어
+    
+    show datadases; 데이터베이스 목록
+    
+    use mysqldb; 데이터베이스 목록 중 한개의 데이터베이스 사용
+    
+    show tables; 이 데이터베이스에 있는 테이블 목록
+*/
