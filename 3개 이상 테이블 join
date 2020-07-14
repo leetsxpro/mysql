@@ -1,0 +1,12 @@
+현재 테이블 상태
+member, member_password, member_name, member_married
+
+select member.idx, id, member_password, member_name, member_married
+
+from member
+
+join member_password on member.idx = member_password.idx
+join member_name on member.idx = member_name.idx
+join member_married on member.idx = member_married.idx
+
+and member.idx = 11;
