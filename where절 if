@@ -1,0 +1,1 @@
+select * from self_diagnosis where depa = if( 17000000 = (select catcode from wiz_member where id = '200602' and catcode = '17000000'), '운영관리부' , '')
