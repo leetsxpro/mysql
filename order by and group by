@@ -1,5 +1,5 @@
 /* table */
-CREATE TABLE `SD_submission_files` (
+CREATE TABLE `table1` (
   `idx` int(11) NOT NULL AUTO_INCREMENT,
   `quarter` varchar(50) NOT NULL,
   `year` varchar(50) NOT NULL,
@@ -11,5 +11,5 @@ CREATE TABLE `SD_submission_files` (
 
 /* qry */
 select * from
-SD_submission_files
-WHERE (year, month) in (select max(year) year, max(month) month from SD_submission_files group by year, quarter) and id = '???' order by year desc, quarter desc
+table1
+WHERE (year, month) in (select max(year) year, max(month) month from table1 group by year, quarter) and id = '???' order by year desc, quarter desc
