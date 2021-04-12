@@ -1,0 +1,15 @@
+/* table */
+CREATE TABLE `SD_submission_files` (
+  `idx` int(11) NOT NULL AUTO_INCREMENT,
+  `quarter` varchar(50) NOT NULL,
+  `year` varchar(50) NOT NULL,
+  `month` varchar(50) NOT NULL,
+  `id` varchar(50) NOT NULL,
+  PRIMARY KEY (`idx`)
+);
+
+
+/* qry */
+select * from
+SD_submission_files
+WHERE (year, month) in (select max(year) year, max(month) month from SD_submission_files group by year, quarter) and id = '???' order by year desc, quarter desc
