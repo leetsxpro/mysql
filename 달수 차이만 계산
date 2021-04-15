@@ -1,0 +1,2 @@
+//개월수 차이가 1개월인 경우
+select if(PERIOD_DIFF(DATE_FORMAT(CURRENT_TIME(), '%Y%m'), DATE_FORMAT(column1, '%Y%m')) = -1, '0', '1') one_month_ago from t1;
